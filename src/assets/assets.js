@@ -74,6 +74,8 @@ import stripe_logo from "./stripe_logo.png";
 import cross_icon from "./cross_icon.png";
 import gsdorganics_Logo from "./gsdorganics_Logo.png";
 import earth from "./earth.jpg";
+import front_vermicompost_50kg from "./front_vermicompost_50kg.png";
+import back_vermicompost_50kg from "./back_vermicompost_50kg.png";
 
 export const assets = {
   logo,
@@ -105,7 +107,7 @@ export const products = [
     description:
       "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
     price: 100,
-    image: [p_img1],
+    image: [front_vermicompost_50kg, back_vermicompost_50kg],
     category: "Women",
     subCategory: "Topwear",
     sizes: ["S", "M", "L"],

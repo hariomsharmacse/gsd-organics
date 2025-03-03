@@ -2,25 +2,25 @@ import { useContext, useEffect, useState } from "react";
 import { ShopContext } from "../context/ShopContext";
 
 const Cart = () => {
-  const { products, currency, carItems } = useContext(ShopContext);
+  const { products, currency, cartItems } = useContext(ShopContext);
 
   const [cartData, setCartData] = useState([]);
 
   useEffect(() => {
     const tempData = [];
-    for (const items in carItems) {
-      for (const item in carItems[item]) {
-        if (carItems[items][item] > 0) {
+    for (const items in cartItems) {
+      for (const item in cartItems[items]) {
+        if (cartItems[items][item] > 0) {
           tempData.push({
             _id: items,
             size: item,
-            quantity: carItems[items][item],
+            quantity: cartItems[items][item],
           });
         }
       }
     }
     console.log(tempData);
-  }, [carItems]);
+  }, [cartItems]);
 
   return <div>Cart</div>;
 };
